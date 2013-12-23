@@ -1,0 +1,21 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="jquery.weekpicker.js" ></script>
+	<script>
+	$(function(){
+	    $(document).on('weekselected',function(d,o){
+			console.log(o);
+			$('#start').html(o.weekOf);
+		});
+		$('.week-picker').weekpicker();
+	});
+	</script>
+</head>
+<body>
+	<div class="week-picker"></div>
+	<div id="start"></div>
+</body>
+</html>
